@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ziggle-ai
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: ziggle-ai
@@ -22,9 +22,6 @@ spec:
       containers:
         - name: ziggle-ai
           image: minjuncho/ziggle-ai:1
-          envFrom:
-            - secretRef:
-                name: blms-gpt-api-key-yaml
           ports:
             - containerPort: 8000
           resources:
