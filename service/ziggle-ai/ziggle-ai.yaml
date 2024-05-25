@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blms-transceiver
+  name: ziggle-ai
   labels:
-    app: blms-transceiver
+    app: ziggle-ai
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: blms-transceiver
+      app: ziggle-ai
   template:
     metadata:
       labels:
-        app: blms-transceiver
+        app: ziggle-ai
     spec:
       containers:
-        - name: blms-transceiver
-          image: minjuncho/blms-transceiver:9
+        - name: ziggle-ai
+          image: minjuncho/ziggle-ai:9
           envFrom:
             - secretRef:
                 name: blms-gpt-api-key-yaml
@@ -26,19 +26,19 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: blms-transceiver-service
+  name: ziggle-ai-service
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8000
   selector:
-    app: blms-transceiver
+    app: ziggle-ai
 ---
 # apiVersion: traefik.containo.us/v1alpha1
 # kind: IngressRoute
 # metadata:
-#   name: blms-transceiver
+#   name: ziggle-ai
 #   namespace: blms
 #   annotations:
 #     kubernetes.io/ingress.class: traefik-external
@@ -49,12 +49,12 @@ spec:
 #     - match: Host(`www.blms.transceiver.api.local.example.com`)
 #       kind: Rule
 #       services:
-#         - name: blms-transceiver-service
+#         - name: ziggle-ai-service
 #           port: 80
 #     - match: Host(`blms.transceiver.api.local.example.com`)
 #       kind: Rule
 #       services:
-#         - name: blms-transceiver-service
+#         - name: ziggle-ai-service
 #           port: 80
 #       middlewares:
 #         - name: blms-headers
