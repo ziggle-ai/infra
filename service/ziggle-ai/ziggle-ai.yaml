@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ziggle-ai
-          image: minjuncho/ziggle-ai:9
+          image: minjuncho/ziggle-ai:1
           envFrom:
             - secretRef:
                 name: blms-gpt-api-key-yaml
