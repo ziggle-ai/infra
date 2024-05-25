@@ -21,7 +21,7 @@ spec:
           operator: Exists
       containers:
         - name: ziggle-ai
-          image: minjuncho/ziggle-ai:1
+          image: minjuncho/ziggle-ai:2
           ports:
             - containerPort: 8000
           resources:
