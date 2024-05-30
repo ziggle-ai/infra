@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ziggle-fe
-          image: minjuncho/ziggle-fe:1
+          image: minjuncho/ziggle-fe:2
           envFrom:
             - secretRef:
                 name: ziggle-fe-secret-yaml
