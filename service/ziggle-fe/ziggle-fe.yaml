@@ -17,9 +17,6 @@ spec:
       containers:
         - name: ziggle-fe
           image: minjuncho/ziggle-fe:2
-          envFrom:
-            - secretRef:
-                name: ziggle-fe-secret-yaml
           ports:
             - containerPort: 3000
 ---
