@@ -14,11 +14,11 @@ spec:
       labels:
         app: ziggle-ai
     spec:
-      nodeName: node4
-      tolerations:
-        - effect: NoSchedule
-          key: nvidia.com/gpu
-          operator: Exists
+      # nodeName: node4
+      # tolerations:
+      #   - effect: NoSchedule
+      #     key: nvidia.com/gpu
+      #     operator: Exists
       containers:
         - name: ziggle-ai
           image: minjuncho/ziggle-ai:6
