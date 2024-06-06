@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ziggle-fe
-          image: minjuncho/ziggle-fe:7
+          image: minjuncho/ziggle-fe:8
           ports:
             - containerPort: 3000
 ---
