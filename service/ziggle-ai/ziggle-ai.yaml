@@ -21,7 +21,7 @@ spec:
       #     operator: Exists
       containers:
         - name: ziggle-ai
-          image: minjuncho/ziggle-ai:26
+          image: minjuncho/ziggle-ai:27
           envFrom:
             - secretRef:
                 name: ziggle-secret-yaml
